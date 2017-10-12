@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body ng-controller="mainCtrl">
+
+
+    <h1>Hello World!</h1>
+
+    <input type="text" ng-model="hello">
+    <button class="btn btn-primary" ng-click="submitTodo()">Submit</button>
+
+    <ul ng-repeat="itodo incompleteTodos">
+        <li>{{ itodo.title }}<span ng-click="completeTodo(itodo)">[x]</span></li>
+    </ul>
+
+    <ul ng-repeat="itodo completeTodos">
+        <li>{{ todo.title }}<span ng-click="removeTodo(todo)">[x]</span></li>
+    </ul>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
