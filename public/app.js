@@ -21,12 +21,12 @@ app.controller('mainCtrl', ['$scope', '$http', function($scope){
             .then( () => $scope.getTodos() );
     };
 
-    $scope.completeTodos = function (todo) {
+    $scope.completeTodo = function (todo) {
         $http.put(`/todos/${todo.id}`, { completed: true })
             .then(() => $scope.getTodos());
     };
 
-    $scope.remove = function (todo) {
+    $scope.removeTodo = function (todo) {
         $http.delete(`/todos/${todo.id}`)
             .then(() => $scope.getTodos());
     }
