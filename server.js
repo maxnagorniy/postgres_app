@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/todos', todoCtrl.getAll);
 app.get('/todos/:id', todoCtrl.getOne);
 app.post('/todos', todoCtrl.addOne);
-app.put('/todos', todoCtrl.changeOne);
-app.delete('/todos', todoCtrl.deleteOne);
+app.put('/todos/:id', todoCtrl.changeOne);
+app.delete('/todos/:id', todoCtrl.deleteOne);
 
 
 app.listen(port, function () {
